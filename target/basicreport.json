@@ -1,0 +1,128 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4841005756,
+              "status": "passed"
+            },
+            "match": {
+              "location": "SharedSteps.deleteCookies()"
+            }
+          }
+        ],
+        "line": 13,
+        "name": ": verify to input extracted car Registration numbers from Input file and search in car valuation page and compare output registration, make or model aginst car out file data",
+        "description": "",
+        "id": "validate-car-registration-numbers;:-verify-to-input-extracted-car-registration-numbers-from-input-file-and-search-in-car-valuation-page-and-compare-output-registration,-make-or-model-aginst-car-out-file-data;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 803765077,
+              "status": "passed"
+            },
+            "match": {
+              "location": "SharedSteps.clearDriver()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1885347217,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I am on Value my car page",
+            "match": {
+              "location": "ValueMyCarAndAboutMyCarSteps.i_am_on_Value_my_car_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5211972,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I extract vehicle registration numbers from \"car_input_v1.txt\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "car_input_v1.txt",
+                  "offset": 45
+                }
+              ],
+              "location": "ValueMyCarAndAboutMyCarSteps.i_extract_vehicle_registration_numbers_from(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 9683872783,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "It should display car registration and make/modle on \"Tell us about your car\" page on entering car reg no and start valuation",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Tell us about your car",
+                  "offset": 54
+                }
+              ],
+              "location": "ValueMyCarAndAboutMyCarSteps.it_should_display_car_registration_and_make_modle_on_page_on_entering_car_reg_no_and_start_valuation(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1100148,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I compare output returned from application with given \"car_output_v1.txt\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "car_output_v1.txt",
+                  "offset": 55
+                }
+              ],
+              "location": "ValueMyCarAndAboutMyCarSteps.i_compare_output_returned_from_application_with_given(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@vehicleregistration"
+          }
+        ]
+      }
+    ],
+    "name": "Validate Car Registration numbers",
+    "description": "",
+    "id": "validate-car-registration-numbers",
+    "keyword": "Feature",
+    "uri": "featureFiles/GetCarRegFromInputFileAndValidate.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@vehicleregistration"
+      }
+    ]
+  }
+]
