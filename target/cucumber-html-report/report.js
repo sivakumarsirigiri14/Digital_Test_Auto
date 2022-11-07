@@ -66,7 +66,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 4841005756,
+  "duration": 5337937776,
   "status": "passed"
 });
 formatter.scenario({
@@ -113,7 +113,7 @@ formatter.match({
   "location": "ValueMyCarAndAboutMyCarSteps.i_am_on_Value_my_car_page()"
 });
 formatter.result({
-  "duration": 1885347217,
+  "duration": 2316964531,
   "status": "passed"
 });
 formatter.match({
@@ -126,7 +126,7 @@ formatter.match({
   "location": "ValueMyCarAndAboutMyCarSteps.i_extract_vehicle_registration_numbers_from(String)"
 });
 formatter.result({
-  "duration": 5211972,
+  "duration": 11842563,
   "status": "passed"
 });
 formatter.match({
@@ -139,7 +139,7 @@ formatter.match({
   "location": "ValueMyCarAndAboutMyCarSteps.it_should_display_car_registration_and_make_modle_on_page_on_entering_car_reg_no_and_start_valuation(String)"
 });
 formatter.result({
-  "duration": 9683872783,
+  "duration": 13983225274,
   "status": "passed"
 });
 formatter.match({
@@ -152,11 +152,11 @@ formatter.match({
   "location": "ValueMyCarAndAboutMyCarSteps.i_compare_output_returned_from_application_with_given(String)"
 });
 formatter.result({
-  "duration": 1100148,
+  "duration": 3108776,
   "status": "passed"
 });
 formatter.after({
-  "duration": 803765077,
+  "duration": 1022274246,
   "status": "passed"
 });
 });

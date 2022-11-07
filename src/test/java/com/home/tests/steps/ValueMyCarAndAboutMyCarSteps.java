@@ -9,13 +9,13 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 
-
 public class ValueMyCarAndAboutMyCarSteps extends CommonSteps {
 
 	
 	public ValueMyCarAndAboutMyCarPage registrationPage;
 	public List<String> makeModelDetails;
 	public List<String> carOutPutFileDataList;
+
 
 	public ValueMyCarAndAboutMyCarSteps(){
 		registrationPage = new ValueMyCarAndAboutMyCarPage(driver);
@@ -42,21 +42,19 @@ public class ValueMyCarAndAboutMyCarSteps extends CommonSteps {
 
 	@Then("^I compare output returned from application with given \"([^\"]*)\"$")
 	public void i_compare_output_returned_from_application_with_given(String outPutFile) throws Throwable {
-
 		String carOutputFile = new File("").getAbsolutePath() + File.separatorChar + "src"+ File.separatorChar + "test" + File.separatorChar +"resources" + File.separatorChar + outPutFile;
 		carOutPutFileDataList = registrationPage.readOutPutFileData(carOutputFile);
 
 		Boolean strComFlag=false;
 		int k=0;
 		for(int i=0; i<makeModelDetails.size();i++){
-
+			strComFlag=false;
 			for(int j=0; j<carOutPutFileDataList.size();j++){
+				k=j;
 				if(makeModelDetails.get(i).equals(carOutPutFileDataList.get(j))){
 					strComFlag=true;
-					k=j;
 					break;
 				}else{
-					strComFlag=false;
 					if(j==carOutPutFileDataList.size()-1){
 						break;
 					}
@@ -71,7 +69,6 @@ public class ValueMyCarAndAboutMyCarSteps extends CommonSteps {
 				System.out.println(e.getMessage());
 			}
 			}
-
 
 		}
 
